@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/evals/">
+    <Project Path="evals/DominicanTools.Evals/DominicanTools.Evals.csproj" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/DominicanTools.Server/DominicanTools.Server.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/DominicanTools.Tests/DominicanTools.Tests.csproj" />
+  </Folder>
+</Solution>
