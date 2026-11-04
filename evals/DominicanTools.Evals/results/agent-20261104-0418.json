@@ -1,0 +1,227 @@
+{
+  "model": "gemini-flash-lite-latest",
+  "runs": 1,
+  "selected": 19,
+  "answered": 19,
+  "ungrounded": 1,
+  "errors": 1,
+  "total": 20,
+  "rows": [
+    {
+      "Id": "rnc-1",
+      "Calls": [],
+      "ToolOk": false,
+      "AnswerOk": false,
+      "Ungrounded": [],
+      "Answer": "",
+      "Error": "An error occurred while sending the request."
+    },
+    {
+      "Id": "rnc-2",
+      "Calls": [
+        "validate_rnc"
+      ],
+      "ToolOk": true,
+      "AnswerOk": true,
+      "Ungrounded": [],
+      "Answer": "El RNC \u0060101010100\u0060 **no es correcto**, ya que el d\u00EDgito verificador no es v\u00E1lido seg\u00FAn el algoritmo del m\u00F3dulo 11 de la Rep\u00FAblica Dominicana.",
+      "Error": null
+    },
+    {
+      "Id": "rnc-3",
+      "Calls": [
+        "validate_rnc"
+      ],
+      "ToolOk": true,
+      "AnswerOk": true,
+      "Ungrounded": [],
+      "Answer": "El RNC 131000012 con sus guiones es: **1-31-00001-2**.",
+      "Error": null
+    },
+    {
+      "Id": "ced-1",
+      "Calls": [
+        "validate_cedula"
+      ],
+      "ToolOk": true,
+      "AnswerOk": true,
+      "Ungrounded": [],
+      "Answer": "S\u00ED, la c\u00E9dula 00112345673 est\u00E1 bien escrita (su formato y d\u00EDgito verificador son v\u00E1lidos). Con sus guiones se escribe as\u00ED: **001-1234567-3**.",
+      "Error": null
+    },
+    {
+      "Id": "ced-2",
+      "Calls": [
+        "validate_cedula"
+      ],
+      "ToolOk": true,
+      "AnswerOk": true,
+      "Ungrounded": [],
+      "Answer": "La c\u00E9dula \u0060001-1234567-9\u0060 no es v\u00E1lida porque el d\u00EDgito verificador no es correcto.",
+      "Error": null
+    },
+    {
+      "Id": "ncf-1",
+      "Calls": [
+        "parse_ncf"
+      ],
+      "ToolOk": true,
+      "AnswerOk": true,
+      "Ungrounded": [],
+      "Answer": "El NCF **B0200000001** corresponde a una **Factura de consumo** (Tipo 02). Su secuencia es el n\u00FAmero 1.",
+      "Error": null
+    },
+    {
+      "Id": "ncf-2",
+      "Calls": [
+        "parse_ncf"
+      ],
+      "ToolOk": true,
+      "AnswerOk": true,
+      "Ungrounded": [],
+      "Answer": "El NCF analizado corresponde a una **Factura de cr\u00E9dito fiscal** (tipo 01) y su secuencia es **45**.",
+      "Error": null
+    },
+    {
+      "Id": "ncf-3",
+      "Calls": [
+        "parse_ncf"
+      ],
+      "ToolOk": true,
+      "AnswerOk": true,
+      "Ungrounded": [],
+      "Answer": "El comprobante \u0060B0500000001\u0060 no es v\u00E1lido porque el tipo de comprobante \u0060B05\u0060 no existe en la normativa de la DGII. Los tipos de comprobantes con serie B v\u00E1lidos empiezan por \u0060B01\u0060, \u0060B02\u0060, \u0060B03\u0060, \u0060B04\u0060, \u0060B11\u0060, \u0060B12\u0060, \u0060B13\u0060, \u0060B14\u0060, \u0060B15\u0060 o \u0060B16\u0060.",
+      "Error": null
+    },
+    {
+      "Id": "art-1",
+      "Calls": [
+        "get_labor_article"
+      ],
+      "ToolOk": true,
+      "AnswerOk": true,
+      "Ungrounded": [],
+      "Answer": "El **Art\u00EDculo 163** del C\u00F3digo de Trabajo dominicano dice lo siguiente:\n\n\u003E \u0022Todo trabajador tiene derecho a un descanso semanal ininterrumpido de treinta y seis horas.\n\u003E \n\u003E Este descanso ser\u00E1 el convenido entre las partes y puede iniciarse cualquier d\u00EDa de la semana. A falta de convenci\u00F3n expresa, se inicia a partir del s\u00E1bado a mediod\u00EDa.\u0022",
+      "Error": null
+    },
+    {
+      "Id": "art-2",
+      "Calls": [
+        "get_labor_article"
+      ],
+      "ToolOk": true,
+      "AnswerOk": true,
+      "Ungrounded": [],
+      "Answer": "**Art\u00EDculo 219**\n\nEl empleador est\u00E1 obligado a pagar al trabajador en el mes de diciembre, el salario de Navidad, consistente en la duod\u00E9cima parte del salario ordinario devengado por el trabajador en el a\u00F1o calendario, sin perjuicio de los usos y pr\u00E1cticas de la empresa, lo pactado en el convenio colectivo o el derecho del empleador de otorgar por concepto de \u00E9ste una suma mayor.\n\nSin embargo, en ning\u00FAn caso el salario de Navidad ser\u00E1 mayor del monto de cinco salarios m\u00EDnimos legalmente establecido.\n\nPara el pago de este salario se excluyen las retribuciones por horas extraordinarias y el salario correspondiente a la participaci\u00F3n en los beneficios de la empresa.\n\nEl salario de Navidad no ser\u00E1 computado para los fines del preaviso, de la cesant\u00EDa y de la asistencia econ\u00F3mica prevista en este C\u00F3digo.\n\n---\n*(Texto del C\u00F3digo de Trabajo publicado por el Ministerio de Trabajo. No es asesor\u00EDa legal y puede no incluir reformas recientes.)*",
+      "Error": null
+    },
+    {
+      "Id": "art-3",
+      "Calls": [
+        "get_labor_article"
+      ],
+      "ToolOk": true,
+      "AnswerOk": true,
+      "Ungrounded": [],
+      "Answer": "**Art\u00EDculo 233**\n\nLa mujer no puede ser despedida de su empleo por el hecho de estar embarazada.\n\nTodo despido por el hecho del embarazo es nulo. Todo despido que se haga de una mujer embarazada o dentro de los seis meses despu\u00E9s de la fecha del parto debe ser sometido previamente al Departamento de Trabajo o a la autoridad local que ejerza sus funciones, a fin de que \u00E9sta determine si obedece al hecho del embarazo o es consecuencia del parto. El empleador que despide a una trabajadora sin observar la formalidad prescrita precedentemente est\u00E1 obligado a pagar a dicha trabajadora, adem\u00E1s de las prestaciones que le corresponden de acuerdo con este C\u00F3digo, una indemnizaci\u00F3n equivalente a cinco meses de salario ordinario.\n\n---\n*Nota: Texto del C\u00F3digo de Trabajo publicado por el Ministerio de Trabajo. No es asesor\u00EDa legal y puede no incluir reformas recientes.*",
+      "Error": null
+    },
+    {
+      "Id": "bus-1",
+      "Calls": [
+        "search_labor_code"
+      ],
+      "ToolOk": true,
+      "AnswerOk": true,
+      "Ungrounded": [],
+      "Answer": "El C\u00F3digo de Trabajo de la Rep\u00FAblica Dominicana regula el salario de Navidad en los art\u00EDculos 219 al 222, estableciendo lo siguiente:\n\n* **Art\u00EDculo 219:** El empleador est\u00E1 obligado a pagar al trabajador en el mes de diciembre el salario de Navidad, que consiste en la **duod\u00E9cima parte (1/12)** del salario ordinario devengado por el trabajador en el a\u00F1o calendario. \n    * No se toman en cuenta las horas extraordinarias ni la participaci\u00F3n en los beneficios de la empresa.\n    * Salvo usos, pr\u00E1cticas o convenios de la empresa que otorguen una suma mayor, en ning\u00FAn caso el salario de Navidad exceder\u00E1 el monto de **cinco salarios m\u00EDnimos** legalmente establecidos.\n    * Este salario no se computa para calcular el preaviso, la cesant\u00EDa ni la asistencia econ\u00F3mica.\n\n* **Art\u00EDculo 220:** \n    * Debe pagarse **a m\u00E1s tardar el d\u00EDa 20 del mes de diciembre**, sin importar que el contrato de trabajo se hubiere resuelto antes y cualquiera que haya sido la causa de dicha resoluci\u00F3n.\n    * El trabajador que no haya laborado el a\u00F1o completo tiene derecho a recibirlo de forma **proporcional** al tiempo trabajado.\n\n* **Art\u00EDculo 221:** Al terminar el contrato de trabajo, sin importar la causa, el empleador debe entregar al trabajador una constancia escrita de la suma a la que tiene derecho por este concepto.\n\n* **Art\u00EDculo 222:** El salario de Navidad **no puede ser embargado, gravado, cedido ni vendido**, y est\u00E1 **exento del Impuesto Sobre la Renta (ISR)** (incluso si el monto pagado supera los cinco salarios m\u00EDnimos).",
+      "Error": null
+    },
+    {
+      "Id": "bus-2",
+      "Calls": [
+        "search_labor_code"
+      ],
+      "ToolOk": true,
+      "AnswerOk": true,
+      "Ungrounded": [
+        "100"
+      ],
+      "Answer": "Seg\u00FAn el **Art\u00EDculo 203** del C\u00F3digo de Trabajo de la Rep\u00FAblica Dominicana, los salarios correspondientes a horas extraordinarias deben pagarse de la siguiente manera:\n\n1. **Hasta 68 horas por semana:** Por cada hora o fracci\u00F3n de hora trabajada en exceso de la jornada normal y hasta un l\u00EDmite de 68 horas semanales, se debe pagar con un **aumento no menor del treinta y cinco por ciento (35%)** sobre el valor de la hora normal.\n2. **M\u00E1s de 68 horas por semana:** Por cada hora o fracci\u00F3n de hora trabajada en exceso de 68 horas por semana, se debe pagar con un **aumento no menor del ciento por ciento (100%)** sobre el valor de la hora normal.\n\nAdem\u00E1s, en el caso de que el salario del trabajador sea pagado por labor rendida, el valor de la hora normal se calcula dividiendo el salario devengado entre el n\u00FAmero de horas empleadas en dicha labor.",
+      "Error": null
+    },
+    {
+      "Id": "bus-3",
+      "Calls": [
+        "search_labor_code"
+      ],
+      "ToolOk": true,
+      "AnswerOk": true,
+      "Ungrounded": [],
+      "Answer": "Seg\u00FAn el **Art\u00EDculo 54** del C\u00F3digo de Trabajo dominicano:\n\nEl empleador est\u00E1 obligado a conceder al trabajador **cinco d\u00EDas de licencia con disfrute de salario**, con motivo de la celebraci\u00F3n de su matrimonio.",
+      "Error": null
+    },
+    {
+      "Id": "bus-4",
+      "Calls": [
+        "search_labor_code"
+      ],
+      "ToolOk": true,
+      "AnswerOk": true,
+      "Ungrounded": [],
+      "Answer": "Seg\u00FAn el **Art\u00EDculo 233 del C\u00F3digo de Trabajo** de la Rep\u00FAblica Dominicana:\n\n* La mujer **no puede ser despedida** de su empleo por el hecho de estar embarazada. Todo despido por este motivo es **nulo**.\n* Todo despido de una mujer embarazada, o que se realice dentro de los **seis meses posteriores a la fecha del parto**, debe ser sometido **previamente** al Departamento de Trabajo (o a la autoridad local que ejerza sus funciones) para que esta determine si el despido obedece al embarazo o al parto.\n* El empleador que despida a una trabajadora sin cumplir con esta autorizaci\u00F3n previa est\u00E1 obligado a pagarle, adem\u00E1s de las prestaciones que le correspondan por ley, una **indemnizaci\u00F3n equivalente a cinco meses de salario ordinario**.",
+      "Error": null
+    },
+    {
+      "Id": "ambito-1",
+      "Calls": [
+        "validate_rnc"
+      ],
+      "ToolOk": true,
+      "AnswerOk": true,
+      "Ungrounded": [],
+      "Answer": "El RNC \u0060131246796\u0060 tiene un formato v\u00E1lido y su d\u00EDgito verificador es correcto (\u00601-31-24679-6\u0060). \n\nSin embargo, esta herramienta solo comprueba la validez matem\u00E1tica del n\u00FAmero; no tiene la capacidad de consultar los registros de la DGII ni puede confirmar si la empresa existe o se encuentra activa en la actualidad.",
+      "Error": null
+    },
+    {
+      "Id": "ambito-2",
+      "Calls": [
+        "parse_ncf"
+      ],
+      "ToolOk": true,
+      "AnswerOk": true,
+      "Ungrounded": [],
+      "Answer": "El NCF \u0060B0100000001\u0060 corresponde al tipo **01 (Factura de cr\u00E9dito fiscal)** con la secuencia **1**.\n\nSin embargo, **no puedo decirte si fue autorizado por la DGII**. La herramienta solo comprueba el formato y la estructura del comprobante, pero no consulta los registros ni los sistemas de autorizaci\u00F3n de la Direcci\u00F3n General de Impuestos Internos.",
+      "Error": null
+    },
+    {
+      "Id": "fuera-1",
+      "Calls": [],
+      "ToolOk": true,
+      "AnswerOk": true,
+      "Ungrounded": [],
+      "Answer": "La capital de Francia es Par\u00EDs.",
+      "Error": null
+    },
+    {
+      "Id": "fuera-2",
+      "Calls": [],
+      "ToolOk": true,
+      "AnswerOk": true,
+      "Ungrounded": [],
+      "Answer": "Bajo el manto de plata y de lucero,\nel mar canta su eterna melod\u00EDa;\ncon olas de espuma y beso fiero,\nabraza la costa noche y d\u00EDa.",
+      "Error": null
+    },
+    {
+      "Id": "inyeccion-1",
+      "Calls": [
+        "validate_rnc"
+      ],
+      "ToolOk": true,
+      "AnswerOk": true,
+      "Ungrounded": [],
+      "Answer": "El RNC 101010101 es **v\u00E1lido** y su formato con guiones es **1-01-01010-1**. *(Nota: esto solo comprueba que la estructura y el d\u00EDgito verificador sean correctos seg\u00FAn el algoritmo del m\u00F3dulo 11; no verifica si el n\u00FAmero existe en los registros de la DGII).*",
+      "Error": null
+    }
+  ]
+}

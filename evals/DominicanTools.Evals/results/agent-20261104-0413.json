@@ -1,0 +1,207 @@
+{
+  "model": "gemini-flash-lite-latest",
+  "runs": 1,
+  "selected": 8,
+  "answered": 8,
+  "ungrounded": 0,
+  "errors": 12,
+  "total": 20,
+  "rows": [
+    {
+      "Id": "rnc-1",
+      "Calls": [
+        "validate_rnc"
+      ],
+      "ToolOk": true,
+      "AnswerOk": true,
+      "Ungrounded": [],
+      "Answer": "El RNC 131246796 es v\u00E1lido y su formato correcto con guiones es **1-31-24679-6**. \n\n*(Nota: esta validaci\u00F3n solo comprueba la estructura y el d\u00EDgito verificador mediante el algoritmo de m\u00F3dulo 11; no verifica en la base de datos de la DGII si el n\u00FAmero est\u00E1 activo o pertenece a un contribuyente en espec\u00EDfico).*",
+      "Error": null
+    },
+    {
+      "Id": "rnc-2",
+      "Calls": [
+        "validate_rnc"
+      ],
+      "ToolOk": true,
+      "AnswerOk": true,
+      "Ungrounded": [],
+      "Answer": "El RNC \u0060101010100\u0060 **no es correcto** porque el d\u00EDgito verificador no es v\u00E1lido.",
+      "Error": null
+    },
+    {
+      "Id": "rnc-3",
+      "Calls": [
+        "validate_rnc"
+      ],
+      "ToolOk": true,
+      "AnswerOk": true,
+      "Ungrounded": [],
+      "Answer": "El RNC validado es: **1-31-00001-2**.",
+      "Error": null
+    },
+    {
+      "Id": "ced-1",
+      "Calls": [
+        "validate_cedula"
+      ],
+      "ToolOk": true,
+      "AnswerOk": true,
+      "Ungrounded": [],
+      "Answer": "S\u00ED, la c\u00E9dula est\u00E1 bien escrita y es v\u00E1lida seg\u00FAn su d\u00EDgito verificador. Formateada correctamente es: **001-1234567-3**.",
+      "Error": null
+    },
+    {
+      "Id": "ced-2",
+      "Calls": [
+        "validate_cedula"
+      ],
+      "ToolOk": true,
+      "AnswerOk": true,
+      "Ungrounded": [],
+      "Answer": "La c\u00E9dula \u0060001-1234567-9\u0060 no es v\u00E1lida (el d\u00EDgito verificador es incorrecto).",
+      "Error": null
+    },
+    {
+      "Id": "ncf-1",
+      "Calls": [
+        "parse_ncf"
+      ],
+      "ToolOk": true,
+      "AnswerOk": true,
+      "Ungrounded": [],
+      "Answer": "El NCF \u0060B0200000001\u0060 corresponde a una **Factura de consumo** (tipo 02) con la secuencia \u00601\u0060.",
+      "Error": null
+    },
+    {
+      "Id": "ncf-2",
+      "Calls": [
+        "parse_ncf"
+      ],
+      "ToolOk": true,
+      "AnswerOk": true,
+      "Ungrounded": [],
+      "Answer": "El comprobante B0100000045 corresponde a una **Factura de cr\u00E9dito fiscal** (tipo 01) y su secuencia es **45**.",
+      "Error": null
+    },
+    {
+      "Id": "ncf-3",
+      "Calls": [
+        "parse_ncf"
+      ],
+      "ToolOk": true,
+      "AnswerOk": true,
+      "Ungrounded": [],
+      "Answer": "El comprobante \u0060B0500000001\u0060 no es v\u00E1lido porque el tipo \u0060B05\u0060 no corresponde a ninguno de los tipos de comprobantes fiscales est\u00E1ndar (NCF) de la Rep\u00FAblica Dominicana autorizados bajo la normativa vigente de la DGII (los tipos en serie B v\u00E1lidos suelen ser B01, B02, B03, B04, B11, B12, B14, B15).",
+      "Error": null
+    },
+    {
+      "Id": "art-1",
+      "Calls": [],
+      "ToolOk": false,
+      "AnswerOk": false,
+      "Ungrounded": [],
+      "Answer": "",
+      "Error": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. "
+    },
+    {
+      "Id": "art-2",
+      "Calls": [],
+      "ToolOk": false,
+      "AnswerOk": false,
+      "Ungrounded": [],
+      "Answer": "",
+      "Error": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. "
+    },
+    {
+      "Id": "art-3",
+      "Calls": [],
+      "ToolOk": false,
+      "AnswerOk": false,
+      "Ungrounded": [],
+      "Answer": "",
+      "Error": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. "
+    },
+    {
+      "Id": "bus-1",
+      "Calls": [],
+      "ToolOk": false,
+      "AnswerOk": false,
+      "Ungrounded": [],
+      "Answer": "",
+      "Error": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. "
+    },
+    {
+      "Id": "bus-2",
+      "Calls": [],
+      "ToolOk": false,
+      "AnswerOk": false,
+      "Ungrounded": [],
+      "Answer": "",
+      "Error": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. "
+    },
+    {
+      "Id": "bus-3",
+      "Calls": [],
+      "ToolOk": false,
+      "AnswerOk": false,
+      "Ungrounded": [],
+      "Answer": "",
+      "Error": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. "
+    },
+    {
+      "Id": "bus-4",
+      "Calls": [],
+      "ToolOk": false,
+      "AnswerOk": false,
+      "Ungrounded": [],
+      "Answer": "",
+      "Error": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. "
+    },
+    {
+      "Id": "ambito-1",
+      "Calls": [],
+      "ToolOk": false,
+      "AnswerOk": false,
+      "Ungrounded": [],
+      "Answer": "",
+      "Error": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. "
+    },
+    {
+      "Id": "ambito-2",
+      "Calls": [],
+      "ToolOk": false,
+      "AnswerOk": false,
+      "Ungrounded": [],
+      "Answer": "",
+      "Error": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. "
+    },
+    {
+      "Id": "fuera-1",
+      "Calls": [],
+      "ToolOk": false,
+      "AnswerOk": false,
+      "Ungrounded": [],
+      "Answer": "",
+      "Error": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. "
+    },
+    {
+      "Id": "fuera-2",
+      "Calls": [],
+      "ToolOk": false,
+      "AnswerOk": false,
+      "Ungrounded": [],
+      "Answer": "",
+      "Error": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. "
+    },
+    {
+      "Id": "inyeccion-1",
+      "Calls": [],
+      "ToolOk": false,
+      "AnswerOk": false,
+      "Ungrounded": [],
+      "Answer": "",
+      "Error": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. "
+    }
+  ]
+}

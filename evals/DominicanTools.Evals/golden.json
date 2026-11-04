@@ -1,0 +1,536 @@
+[
+ {
+  "id": "rnc-valido-101010101",
+  "tool": "validate_rnc",
+  "args": {
+   "value": "101010101"
+  },
+  "expect": {
+   "valid": true,
+   "formatted": "1-01-01010-1"
+  }
+ },
+ {
+  "id": "rnc-valido-131000012",
+  "tool": "validate_rnc",
+  "args": {
+   "value": "131000012"
+  },
+  "expect": {
+   "valid": true,
+   "formatted": "1-31-00001-2"
+  }
+ },
+ {
+  "id": "rnc-valido-123456786",
+  "tool": "validate_rnc",
+  "args": {
+   "value": "123456786"
+  },
+  "expect": {
+   "valid": true,
+   "formatted": "1-23-45678-6"
+  }
+ },
+ {
+  "id": "rnc-valido-100000004",
+  "tool": "validate_rnc",
+  "args": {
+   "value": "100000004"
+  },
+  "expect": {
+   "valid": true,
+   "formatted": "1-00-00000-4"
+  }
+ },
+ {
+  "id": "rnc-valido-131246796",
+  "tool": "validate_rnc",
+  "args": {
+   "value": "131246796"
+  },
+  "expect": {
+   "valid": true,
+   "formatted": "1-31-24679-6"
+  }
+ },
+ {
+  "id": "rnc-invalido-101010100",
+  "tool": "validate_rnc",
+  "args": {
+   "value": "101010100"
+  },
+  "expect": {
+   "valid": false,
+   "problem": "CheckDigit"
+  }
+ },
+ {
+  "id": "rnc-invalido-123456785",
+  "tool": "validate_rnc",
+  "args": {
+   "value": "123456785"
+  },
+  "expect": {
+   "valid": false,
+   "problem": "CheckDigit"
+  }
+ },
+ {
+  "id": "rnc-invalido-12345",
+  "tool": "validate_rnc",
+  "args": {
+   "value": "12345"
+  },
+  "expect": {
+   "valid": false,
+   "problem": "Length"
+  }
+ },
+ {
+  "id": "rnc-invalido-12345678A",
+  "tool": "validate_rnc",
+  "args": {
+   "value": "12345678A"
+  },
+  "expect": {
+   "valid": false,
+   "problem": "NotDigits"
+  }
+ },
+ {
+  "id": "rnc-invalido-000000002",
+  "tool": "validate_rnc",
+  "args": {
+   "value": "000000002"
+  },
+  "expect": {
+   "valid": false,
+   "problem": "Zeros"
+  }
+ },
+ {
+  "id": "cedula-valida-00112345673",
+  "tool": "validate_cedula",
+  "args": {
+   "value": "00112345673"
+  },
+  "expect": {
+   "valid": true,
+   "formatted": "001-1234567-3"
+  }
+ },
+ {
+  "id": "cedula-valida-00100000009",
+  "tool": "validate_cedula",
+  "args": {
+   "value": "00100000009"
+  },
+  "expect": {
+   "valid": true,
+   "formatted": "001-0000000-9"
+  }
+ },
+ {
+  "id": "cedula-valida-40200000004",
+  "tool": "validate_cedula",
+  "args": {
+   "value": "40200000004"
+  },
+  "expect": {
+   "valid": true,
+   "formatted": "402-0000000-4"
+  }
+ },
+ {
+  "id": "cedula-valida-00101234565",
+  "tool": "validate_cedula",
+  "args": {
+   "value": "00101234565"
+  },
+  "expect": {
+   "valid": true,
+   "formatted": "001-0123456-5"
+  }
+ },
+ {
+  "id": "cedula-invalida-00112345670",
+  "tool": "validate_cedula",
+  "args": {
+   "value": "00112345670"
+  },
+  "expect": {
+   "valid": false
+  }
+ },
+ {
+  "id": "cedula-invalida-00112345674",
+  "tool": "validate_cedula",
+  "args": {
+   "value": "00112345674"
+  },
+  "expect": {
+   "valid": false
+  }
+ },
+ {
+  "id": "cedula-invalida-00100000000",
+  "tool": "validate_cedula",
+  "args": {
+   "value": "00100000000"
+  },
+  "expect": {
+   "valid": false
+  }
+ },
+ {
+  "id": "ncf-b01",
+  "tool": "parse_ncf",
+  "args": {
+   "value": "B0100000001"
+  },
+  "expect": {
+   "valid": true,
+   "kind": "traditional",
+   "type": "01",
+   "sequence": 1
+  }
+ },
+ {
+  "id": "ncf-b02-minuscula",
+  "tool": "parse_ncf",
+  "args": {
+   "value": "b0200000001"
+  },
+  "expect": {
+   "valid": true,
+   "type": "02"
+  }
+ },
+ {
+  "id": "ncf-invalido-A0100000001",
+  "tool": "parse_ncf",
+  "args": {
+   "value": "A0100000001"
+  },
+  "expect": {
+   "valid": false,
+   "problem": "series"
+  }
+ },
+ {
+  "id": "ncf-invalido-B0500000001",
+  "tool": "parse_ncf",
+  "args": {
+   "value": "B0500000001"
+  },
+  "expect": {
+   "valid": false,
+   "problem": "type"
+  }
+ },
+ {
+  "id": "ncf-invalido-B010000001",
+  "tool": "parse_ncf",
+  "args": {
+   "value": "B010000001"
+  },
+  "expect": {
+   "valid": false,
+   "problem": "length"
+  }
+ },
+ {
+  "id": "ncf-invalido-B01-0000001",
+  "tool": "parse_ncf",
+  "args": {
+   "value": "B01-0000001"
+  },
+  "expect": {
+   "valid": false,
+   "problem": "not_digits"
+  }
+ },
+ {
+  "id": "articulo-1",
+  "tool": "get_labor_article",
+  "args": {
+   "number": 1
+  },
+  "expectTextContains": [
+   "El contrato de trabajo es aquel por el cual"
+  ]
+ },
+ {
+  "id": "articulo-76",
+  "tool": "get_labor_article",
+  "args": {
+   "number": 76
+  },
+  "expectTextContains": [
+   "aviso previo"
+  ]
+ },
+ {
+  "id": "articulo-163",
+  "tool": "get_labor_article",
+  "args": {
+   "number": 163
+  },
+  "expectTextContains": [
+   "descanso semanal ininterrumpido"
+  ]
+ },
+ {
+  "id": "articulo-177",
+  "tool": "get_labor_article",
+  "args": {
+   "number": 177
+  },
+  "expectTextContains": [
+   "vacaciones"
+  ]
+ },
+ {
+  "id": "articulo-219",
+  "tool": "get_labor_article",
+  "args": {
+   "number": 219
+  },
+  "expectTextContains": [
+   "salario de Navidad"
+  ]
+ },
+ {
+  "id": "articulo-738",
+  "tool": "get_labor_article",
+  "args": {
+   "number": 738
+  },
+  "expectTextContains": [
+   "La reglamentación de la garantía"
+  ]
+ },
+ {
+  "id": "busqueda-01",
+  "tool": "search_labor_code",
+  "args": {
+   "query": "¿Cuántos días de vacaciones me corresponden después de un año de trabajo?"
+  },
+  "expectTopContains": [
+   177
+  ]
+ },
+ {
+  "id": "busqueda-02",
+  "tool": "search_labor_code",
+  "args": {
+   "query": "¿Qué es el salario de Navidad y cuándo se paga?"
+  },
+  "expectTopContains": [
+   219,
+   220
+  ]
+ },
+ {
+  "id": "busqueda-03",
+  "tool": "search_labor_code",
+  "args": {
+   "query": "¿Cuánto tiempo de preaviso debe dar el empleador para un desahucio?"
+  },
+  "expectTopContains": [
+   76
+  ],
+  "knownMiss": true
+ },
+ {
+  "id": "busqueda-04",
+  "tool": "search_labor_code",
+  "args": {
+   "query": "¿Qué es el auxilio de cesantía?"
+  },
+  "expectTopContains": [
+   80,
+   81,
+   85
+  ]
+ },
+ {
+  "id": "busqueda-05",
+  "tool": "search_labor_code",
+  "args": {
+   "query": "¿Cuáles son las causas justas para despedir a un trabajador?"
+  },
+  "expectTopContains": [
+   88
+  ],
+  "knownMiss": true
+ },
+ {
+  "id": "busqueda-06",
+  "tool": "search_labor_code",
+  "args": {
+   "query": "¿En cuánto tiempo debe comunicarse un despido a la autoridad de trabajo?"
+  },
+  "expectTopContains": [
+   91
+  ]
+ },
+ {
+  "id": "busqueda-07",
+  "tool": "search_labor_code",
+  "args": {
+   "query": "¿Cuánto dura la licencia por maternidad de una trabajadora embarazada?"
+  },
+  "expectTopContains": [
+   236
+  ],
+  "knownMiss": true
+ },
+ {
+  "id": "busqueda-08",
+  "tool": "search_labor_code",
+  "args": {
+   "query": "¿Cuál es la jornada máxima de trabajo?"
+  },
+  "expectTopContains": [
+   147
+  ],
+  "knownMiss": true
+ },
+ {
+  "id": "busqueda-09",
+  "tool": "search_labor_code",
+  "args": {
+   "query": "¿Cómo se pagan las horas extras?"
+  },
+  "expectTopContains": [
+   203
+  ]
+ },
+ {
+  "id": "busqueda-10",
+  "tool": "search_labor_code",
+  "args": {
+   "query": "¿Se puede despedir a una mujer embarazada?"
+  },
+  "expectTopContains": [
+   233
+  ]
+ },
+ {
+  "id": "busqueda-11",
+  "tool": "search_labor_code",
+  "args": {
+   "query": "¿Qué es la dimisión del trabajador?"
+  },
+  "expectTopContains": [
+   96
+  ],
+  "knownMiss": true
+ },
+ {
+  "id": "busqueda-12",
+  "tool": "search_labor_code",
+  "args": {
+   "query": "¿Cuántos días de descanso semanal tiene el trabajador?"
+  },
+  "expectTopContains": [
+   163
+  ]
+ },
+ {
+  "id": "busqueda-13",
+  "tool": "search_labor_code",
+  "args": {
+   "query": "¿Qué porcentaje de las utilidades corresponde a los trabajadores?"
+  },
+  "expectTopContains": [
+   223
+  ]
+ },
+ {
+  "id": "busqueda-14",
+  "tool": "search_labor_code",
+  "args": {
+   "query": "¿Qué es un contrato por tiempo indefinido?"
+  },
+  "expectTopContains": [
+   25,
+   26,
+   34
+  ]
+ },
+ {
+  "id": "busqueda-15",
+  "tool": "search_labor_code",
+  "args": {
+   "query": "¿Qué es un sindicato?"
+  },
+  "expectTopContains": [
+   317
+  ],
+  "knownMiss": true
+ },
+ {
+  "id": "busqueda-16",
+  "tool": "search_labor_code",
+  "args": {
+   "query": "¿Cuándo es ilegal una huelga?"
+  },
+  "expectTopContains": [
+   406
+  ]
+ },
+ {
+  "id": "busqueda-17",
+  "tool": "search_labor_code",
+  "args": {
+   "query": "¿Se puede descontar dinero del salario del trabajador?"
+  },
+  "expectTopContains": [
+   201
+  ],
+  "knownMiss": true
+ },
+ {
+  "id": "busqueda-18",
+  "tool": "search_labor_code",
+  "args": {
+   "query": "¿Cuál es el plazo para reclamar el pago de las prestaciones por un despido?"
+  },
+  "expectTopContains": [
+   702
+  ]
+ },
+ {
+  "id": "busqueda-19",
+  "tool": "search_labor_code",
+  "args": {
+   "query": "¿Cuántos días de licencia por matrimonio o fallecimiento de un familiar?"
+  },
+  "expectTopContains": [
+   54
+  ]
+ },
+ {
+  "id": "busqueda-20",
+  "tool": "search_labor_code",
+  "args": {
+   "query": "¿Qué es el salario mínimo?"
+  },
+  "expectTopContains": [
+   213
+  ]
+ },
+ {
+  "id": "busqueda-21",
+  "tool": "search_labor_code",
+  "args": {
+   "query": "¿Qué es un accidente de trabajo?"
+  },
+  "expectTopContains": [
+   726
+  ]
+ }
+]
