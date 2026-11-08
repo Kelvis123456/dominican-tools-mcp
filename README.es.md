@@ -2,6 +2,8 @@ English: [README.md](README.md)
 
 # dominican-tools-mcp
 
+[![M8ven Score](https://m8ven.ai/badge/mcp/kelvis123456-dominican-tools-mcp-1wnvtu?v=369b0ab0691fa171e2e897e4953df506)](https://m8ven.ai/mcp/kelvis123456-dominican-tools-mcp-1wnvtu?s=readme)
+
 Un servidor MCP (Model Context Protocol) que le da a un asistente de IA cinco herramientas de solo lectura sobre cosas dominicanas: validar un RNC, una cédula o un NCF, y buscar y leer artículos del Código de Trabajo. Es el código de [dgii-helper](https://github.com/Kelvis123456/dgii-helper) y de [codigo-trabajo-rag](https://github.com/Kelvis123456/codigo-trabajo-rag) expuesto por el protocolo, más un conjunto de evaluaciones que miden si las herramientas devuelven lo correcto y si un modelo las usa bien.
 
 Lo hice porque conectar una herramienta a un modelo es lo fácil. Lo que quería ver es cómo se comprueba que funciona: que la herramienta responda bien, que su descripción baste para que el modelo la elija, y que el modelo no invente lo que la herramienta no dijo.
