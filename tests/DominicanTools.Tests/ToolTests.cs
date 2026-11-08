@@ -173,13 +173,14 @@ public class ProtocolTests(McpHarness mcp) : IClassFixture<McpHarness>
     }
 
     [Fact]
-    public async Task Todas_son_de_solo_lectura_idempotentes_y_sin_mundo_abierto()
+    public async Task Todas_son_de_solo_lectura_no_destructivas_idempotentes_y_sin_mundo_abierto()
     {
         foreach (var tool in await mcp.Client.ListToolsAsync())
         {
             var a = tool.ProtocolTool.Annotations;
             Assert.NotNull(a);
             Assert.True(a!.ReadOnlyHint, tool.Name);
+            Assert.False(a.DestructiveHint, tool.Name);
             Assert.True(a.IdempotentHint, tool.Name);
             Assert.False(a.OpenWorldHint, tool.Name);
         }

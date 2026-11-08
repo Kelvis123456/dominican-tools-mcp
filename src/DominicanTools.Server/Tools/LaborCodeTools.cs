@@ -27,7 +27,7 @@ public sealed class LaborCodeTools
         return (all, new Bm25Index(all));
     }
 
-    [McpServerTool(Name = "search_labor_code", ReadOnly = true, Idempotent = true, OpenWorld = false)]
+    [McpServerTool(Name = "search_labor_code", ReadOnly = true, Destructive = false, Idempotent = true, OpenWorld = false)]
     [Description(
         "Busca por palabras en los 738 artículos del Código de Trabajo dominicano y devuelve los más parecidos a la consulta, con su texto completo. "
         + "Es búsqueda léxica (BM25): funciona mejor con las palabras que usaría la ley que con una pregunta larga. "
@@ -49,7 +49,7 @@ public sealed class LaborCodeTools
         });
     }
 
-    [McpServerTool(Name = "get_labor_article", ReadOnly = true, Idempotent = true, OpenWorld = false)]
+    [McpServerTool(Name = "get_labor_article", ReadOnly = true, Destructive = false, Idempotent = true, OpenWorld = false)]
     [Description("Devuelve el texto exacto de un artículo del Código de Trabajo por su número (1 a 738). Úsalo cuando ya sepas qué artículo necesitas.")]
     public static string GetArticle([Description("Número del artículo, de 1 a 738")] int number)
     {
