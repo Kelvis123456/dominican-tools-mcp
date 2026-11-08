@@ -17,17 +17,17 @@ public sealed class IdentifierTools
     private const string Scope =
         "Solo comprueba el formato y el dígito verificador; no consulta a la DGII ni dice si el número existe o pertenece a alguien.";
 
-    [McpServerTool(Name = "validate_rnc", ReadOnly = true, Idempotent = true, OpenWorld = false)]
+    [McpServerTool(Name = "validate_rnc", ReadOnly = true, Destructive = false, Idempotent = true, OpenWorld = false)]
     [Description("Valida un RNC dominicano de 9 dígitos (dígito verificador módulo 11) y lo devuelve con sus guiones. " + Scope)]
     public static string ValidateRnc([Description("El RNC, con o sin guiones o espacios. Ejemplo: 131246796")] string value) =>
         Respond(Rnc.Validate(Checked(value)));
 
-    [McpServerTool(Name = "validate_cedula", ReadOnly = true, Idempotent = true, OpenWorld = false)]
+    [McpServerTool(Name = "validate_cedula", ReadOnly = true, Destructive = false, Idempotent = true, OpenWorld = false)]
     [Description("Valida una cédula dominicana de 11 dígitos (dígito verificador de Luhn) y la devuelve con sus guiones. " + Scope)]
     public static string ValidateCedula([Description("La cédula, con o sin guiones o espacios. Ejemplo: 001-1234567-3")] string value) =>
         Respond(Cedula.Validate(Checked(value)));
 
-    [McpServerTool(Name = "parse_ncf", ReadOnly = true, Idempotent = true, OpenWorld = false)]
+    [McpServerTool(Name = "parse_ncf", ReadOnly = true, Destructive = false, Idempotent = true, OpenWorld = false)]
     [Description(
         "Lee un NCF (serie B, 11 caracteres) o un e-CF (serie E, 13 caracteres) y devuelve su tipo de comprobante y su secuencia. "
         + "Solo mira el formato: no sabe si el comprobante fue autorizado ni si la secuencia está dentro de un rango válido.")]
