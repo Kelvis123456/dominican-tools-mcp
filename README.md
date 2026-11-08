@@ -2,7 +2,7 @@ Español: [README.es.md](README.es.md)
 
 # dominican-tools-mcp
 
-[![M8ven Score](https://m8ven.ai/badge/mcp/kelvis123456-dominican-tools-mcp-1wnvtu?v=369b0ab0691fa171e2e897e4953df506)](https://m8ven.ai/mcp/kelvis123456-dominican-tools-mcp-1wnvtu?s=readme)
+[![M8ven Score](https://m8ven.ai/badge/mcp/kelvis123456-dominican-tools-mcp-1wnvtu?v=f89bfb72ab6540f1a16dadbcf22c0b25)](https://m8ven.ai/mcp/kelvis123456-dominican-tools-mcp-1wnvtu?s=readme)
 
 An MCP (Model Context Protocol) server that gives an AI assistant five read-only tools for Dominican-specific tasks: validating an RNC, a cédula or an NCF, and searching and reading articles of the Código de Trabajo. It is the code from [dgii-helper](https://github.com/Kelvis123456/dgii-helper) and [codigo-trabajo-rag](https://github.com/Kelvis123456/codigo-trabajo-rag) exposed through the protocol, plus a set of evaluations that measure whether the tools return the right thing and whether a model uses them well.
 
